@@ -16,8 +16,9 @@ class MyApp extends StatelessWidget {
       ),
       home: const MyHomePage(),
       routes: <String, WidgetBuilder>{
-        '/home': (BuildContext context) => const MyHomePage(),
-        '/animations': (BuildContext context) => const AnimationsPage(),
+        '/home': (context) => const MyHomePage(),
+        '/animations': (context) => const AnimationsPage(),
+        '/scroll-page': (context) => const ScrollPage(),
       },
     );
   }
@@ -61,6 +62,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.of(context).pushNamed('/animations');
               },
               child: const Text('Animations'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/scroll-page');
+              },
+              child: const Text('Scroll Page'),
             ),
           ],
         ),

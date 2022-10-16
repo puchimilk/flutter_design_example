@@ -9,18 +9,6 @@ class AnimationsPage extends StatefulWidget {
 
 class _AnimationsPageState extends State<AnimationsPage>
     with SingleTickerProviderStateMixin {
-  bool selected = false;
-
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
