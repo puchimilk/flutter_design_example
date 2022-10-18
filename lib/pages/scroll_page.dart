@@ -1,4 +1,5 @@
 import 'package:flutter_design_example/pages/all.dart';
+import 'package:flutter_design_example/widgets/all.dart';
 
 class ScrollPage extends StatelessWidget {
   const ScrollPage({super.key});
@@ -18,36 +19,38 @@ class ScrollPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(),
-      body: Container(
-        color: Colors.grey[200],
-        child: LayoutBuilder(
-          builder: (context, constraints) => SingleChildScrollView(
-            child: ConstrainedBox(
-              constraints: BoxConstraints(minHeight: constraints.maxHeight),
-              child: Column(
-                children: [
-                  const SizedBox(
-                    height: 400,
-                  ),
-                  TextFormField(
-                    decoration: inputDecoration,
-                  ),
-                  const SizedBox(
-                    height: 32,
-                  ),
-                  TextFormField(
-                    decoration: inputDecoration,
-                  ),
-                  const SizedBox(
-                    height: 32,
-                  ),
-                  TextFormField(
-                    decoration: inputDecoration,
-                  ),
-                  const SizedBox(
-                    height: 400,
-                  ),
-                ],
+      body: UnfocusArea(
+        child: Container(
+          color: Colors.grey[200],
+          child: LayoutBuilder(
+            builder: (context, constraints) => SingleChildScrollView(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                child: Column(
+                  children: [
+                    const SizedBox(
+                      height: 400,
+                    ),
+                    TextFormField(
+                      decoration: inputDecoration,
+                    ),
+                    const SizedBox(
+                      height: 32,
+                    ),
+                    TextFormField(
+                      decoration: inputDecoration,
+                    ),
+                    const SizedBox(
+                      height: 32,
+                    ),
+                    TextFormField(
+                      decoration: inputDecoration,
+                    ),
+                    const SizedBox(
+                      height: 400,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
